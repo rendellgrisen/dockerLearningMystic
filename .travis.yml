@@ -1,0 +1,9 @@
+sudo: required
+# docker image is required
+services:
+  - docker 
+  
+# test suite running  
+before_install:
+  - docker build -t rendellgrisen/docker-learning -f Dockerfile.dev .  
+  
